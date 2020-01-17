@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Temperature(degreeCelcius)  {
+            this.degreeCelcius = degreeCelcius;
+            this.cToFConvert = function () {
+                return this.degreeCelcius * 1.8 + 32;
+            }
+            this.cToKConvert = function () {
+                return this.degreeCelcius + 273.15;
+            }
+        }
+
+        let a = parseFloat(prompt("Enter Celcius Degree: "));
+        let temp = new Temperature(a);
+        alert("To F Degree: " +temp.cToFConvert());
+        alert("To K Degree: " +temp.cToKConvert());
+    </script>
+</body>
+</html>
